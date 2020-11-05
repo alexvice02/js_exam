@@ -73,7 +73,7 @@ function fixTime(time, add)
     {
         minutes = add + minutes;
 
-        return `${hours}:${minutes}`
+        return `${hours}:${(minutes < 10) ? `0${minutes}` : minutes}`
     }
 
 }
