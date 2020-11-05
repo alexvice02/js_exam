@@ -68,13 +68,11 @@ function fixTime(time, add)
         minutes = (minutes + add) % 60;
         hours++
 
-        return `${hours}:${minutes}`
-    }else
-    {
-        minutes = add + minutes;
-
-        return `${hours}:${(minutes < 10) ? `0${minutes}` : minutes}`
+        return `${(hours < 10) ? `0${hours}` : hours}:${(minutes < 10) ? `0${minutes}` : minutes}`
     }
+
+    minutes = add + minutes;
+    return `${(hours < 10) ? `0${hours}` : hours}:${(minutes < 10) ? `0${minutes}` : minutes}`
 
 }
 
